@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/hundekeycreeates/static/css/main.44084875.css",
-    "main.js": "/hundekeycreeates/static/js/main.b0fc4909.js",
+    "main.js": "/hundekeycreeates/static/js/main.bfc268bf.js",
     "static/js/787.1fc54727.chunk.js": "/hundekeycreeates/static/js/787.1fc54727.chunk.js",
     "static/media/watercolor-plant.png": "/hundekeycreeates/static/media/watercolor-plant.3f8087fa23918257ed7d.png",
     "static/media/PlayfairDisplay-VariableFont_wght.ttf": "/hundekeycreeates/static/media/PlayfairDisplay-VariableFont_wght.3f7c141215e6d22d0f1e.ttf",
@@ -11,11 +11,11 @@
     "static/media/logo.png": "/hundekeycreeates/static/media/logo.ab74d6638e99cb0759d5.png",
     "index.html": "/hundekeycreeates/index.html",
     "main.44084875.css.map": "/hundekeycreeates/static/css/main.44084875.css.map",
-    "main.b0fc4909.js.map": "/hundekeycreeates/static/js/main.b0fc4909.js.map",
+    "main.bfc268bf.js.map": "/hundekeycreeates/static/js/main.bfc268bf.js.map",
     "787.1fc54727.chunk.js.map": "/hundekeycreeates/static/js/787.1fc54727.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.44084875.css",
-    "static/js/main.b0fc4909.js"
+    "static/js/main.bfc268bf.js"
   ]
 }
