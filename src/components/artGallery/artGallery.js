@@ -15,7 +15,7 @@ function ArtGallery({selectedCategoryId}) {
                     return (
                             <img key={art.id} 
                                  className="img-fluid" 
-                                 src={`/img/${art.filename}`} 
+                                 src={`img/${art.filename}`} 
                                  alt={art.filename} />
                     )
                 })}
