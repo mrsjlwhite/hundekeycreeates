@@ -1,0 +1,24 @@
+$light-beige: #FAFDF3;
+$sage: #B2AC88;
+$cambridge-blue: #9EB4A7;
+$hookers-green: #426A5A;
+$tan: #D2B48C;
+$alabaster: #E7E1D8;
+$smokey-black: #0D0A0B;
+$floral-white: #FFFAF0;
+
+$box-shadow: rgba(0, 0, 0, 0.1);
+$font-color: $smokey-black;
+$font-title: PlayfairDisplay;
+$font-body: BrandonGrotesque;
+
+//fonts
+@font-face {
+    font-family: PlayfairDisplay;
+    src: url(../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: BrandonGrotesque;
+    src: url(../assets/fonts/brandon-grotesque-black.otf);
+}

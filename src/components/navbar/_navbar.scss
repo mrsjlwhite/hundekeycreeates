@@ -1,0 +1,30 @@
+@import '../../styles/_colors.scss';
+
+.navbar-contents {
+    background-color: transparent;
+    justify-content: right;
+
+    .main-link {
+        color: $sage;
+        font-size: 18px;
+        font-weight: 250;
+        letter-spacing: .2rem;
+        text-transform: uppercase;
+
+        a {
+            color: $sage;
+        }
+
+        &:hover {
+            color: $hookers-green;
+        }
+    }
+
+    .child-link {
+        &:hover {
+            color: $light-beige;
+            background-color: $sage;
+            font-weight: 500;
+        }
+    }
+}

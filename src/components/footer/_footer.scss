@@ -1,0 +1,22 @@
+@import '../../styles/colors';
+
+.footer {
+    color: $font-color;
+    font-family: $font-body;
+    letter-spacing: .1rem;
+    font-weight: 500;
+    margin-left: 1rem;
+    padding: 2rem;
+    text-align: left;
+
+    a {
+        color: $font-color;
+        text-decoration: none;
+        transition: 0.3s;
+
+        &:hover {
+            color: $hookers-green;
+            font-weight: 700;
+        }
+    }
+}

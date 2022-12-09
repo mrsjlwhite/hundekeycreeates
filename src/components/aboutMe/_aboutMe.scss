@@ -1,0 +1,55 @@
+@import '../../styles/colors';
+
+.about-me {
+  margin-top: 4rem;
+  text-align: center;
+  height: 175vh;
+
+  .about-title {
+    color: $hookers-green;
+    font-family: $font-title;
+  }
+
+  .about-desc {
+    font-family: $font-body;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+    letter-spacing: 2px;
+  }
+
+  img {
+    width: 55%;
+    max-height: 700px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px $box-shadow;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    &:hover {
+      -webkit-transform: scale(1.10, 1.10);
+      transform: scale(1.10, 1.10);
+
+      box-shadow: 7px 7px 8px $box-shadow;
+      -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .about-me {
+    margin-top: 0;
+    height: 80vh;
+
+    .about-desc {
+      margin: 0 5px;
+    }
+
+    img {
+      max-height: 350px;
+      object-fit: cover;
+    }
+  }
+}
