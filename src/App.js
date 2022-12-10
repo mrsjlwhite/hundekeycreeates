@@ -9,6 +9,7 @@ import watercolorVine from './assets/img/watercolor-plant.png';
 import Footer from './components/footer/footer';
 import AboutMe from './components/aboutMe/aboutMe';
 import ContactMe from './components/contactMe/contactMe';
+import "react-image-gallery/styles/scss/image-gallery.scss";
 
 function App() {
   const [selectedCategoryId, setSelectedCategoryId] = useState(0);
