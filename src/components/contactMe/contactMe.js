@@ -4,19 +4,29 @@ import { Container } from 'react-bootstrap';
 
 function ContactMe() {
     const cm = Content[1];
-    
-    const onIconClick = () => {
-        window.open(cm.link);
+
+    const onIconClick = (link) => {
+        window.open(link);
     }
 
     return (
         <Container className='contact-me'>
             <h3 className='contact-title'>Contact Me</h3>
             <h5 className='contact-desc'>
-                {cm.description} 
-                <span className='contact-link' onClick={onIconClick}>
-                    <i className="fa-brands fa-instagram fa-xl"></i>
-                </span>
+                {cm.description}
+                {cm.instagrams.map(ig => {
+                    return (
+                        <div  key={ig.handle}
+                            className='contact-link'
+                            onClick={() => onIconClick(ig.link)}>
+                            <i className="fa-brands fa-instagram fa-2xl"></i>
+                            <p>    
+                                &nbsp;
+                                {ig.handle}
+                            </p>
+                        </div>
+                    )
+                })}
             </h5>
         </Container>
     )

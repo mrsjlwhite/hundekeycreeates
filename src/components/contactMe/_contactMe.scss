@@ -20,6 +20,13 @@
     }
 
     .contact-link {
+        margin: 3rem;
+        font-family: $font-title;
+
+        p {
+            margin-top: .8rem;
+        }
+
         &:hover {
             color: $hookers-green;
             cursor: pointer;
@@ -30,10 +37,15 @@
 @media only screen and (max-width: 768px) {
     .contact-me {
         margin-top: 0;
-        height: 45vh;
+        height: 53vh;
     }
 
     .contact-link {
+        p {
+            font-size: 30px;
+            margin-top: 3rem !important;
+        }
+
         .fa-instagram {
             font-size: 80px;
             display: flex;

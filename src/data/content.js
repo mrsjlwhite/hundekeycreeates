@@ -6,7 +6,16 @@ const Content = [
     {
         name: 'contact',
         description: 'Please dont really reach me at... ',
-        link: 'https://www.instagram.com/hundekey/'
+        instagrams: [
+            {
+                handle: '@hundekey',
+                link: 'https://www.instagram.com/hundekey/'
+            },
+            {
+                handle: '@hundekeycreeates_',
+                link: 'https://www.instagram.com/hundekeycreeates_/'
+            },
+        ]
     }
 ];
 
