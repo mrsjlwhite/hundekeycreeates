@@ -5,24 +5,40 @@
     margin-top: 4rem;
     text-align: center;
 
-    p,
-    span,
-    a {
-        font-family: $font-body;
-        letter-spacing: 2px;
-    }
-
     .contact-title {
         color: $hookers-green;
         font-family: $font-title;
         text-align: center;
-        margin-bottom: 25px;
+        margin-bottom: 35px;
+    }
+
+    .contact-desc,
+    .contact-link {
+        color: $font-color;
+        font-family: $font-body;
+        letter-spacing: 2px;
+    }
+
+    .contact-link {
+        &:hover {
+            color: $hookers-green;
+            cursor: pointer;
+        }
     }
 }
 
 @media only screen and (max-width: 768px) {
     .contact-me {
         margin-top: 0;
-        height: 50vh;
+        height: 45vh;
+    }
+
+    .contact-link {
+        .fa-instagram {
+            font-size: 80px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 80px;
+        }
     }
 }
