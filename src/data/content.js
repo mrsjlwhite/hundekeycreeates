@@ -5,9 +5,8 @@ const Content = [
     },
     {
         name: 'contact',
-        description: 'Please dont really reach me at...',
-        link: 'google.com',
-        linkName: 'this website.'
+        description: 'Please dont really reach me at... ',
+        link: 'https://www.instagram.com/hundekey/'
     }
 ];
 
