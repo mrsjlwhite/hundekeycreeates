@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './styles/_index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import "react-image-gallery/styles/scss/image-gallery.scss";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
