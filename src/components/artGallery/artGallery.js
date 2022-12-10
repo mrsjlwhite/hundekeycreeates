@@ -19,8 +19,8 @@ function ArtGallery({selectedCategoryId}) {
                     return (
                             <img key={art.id} 
                                  className="img-fluid" 
-                                 src={require(`/public/img/${art.filename}`)} //localPath
-                                 //src={require(`img/${art.filename}`)} //deployedPath
+                                 src={`img/${art.filename}`} //deployedPath 
+                                 //src={require(`/public/img/${art.filename}`)} //localPath
                                  onClick={() => setShowCarousel(true)}
                                  alt={art.filename} />
                     )

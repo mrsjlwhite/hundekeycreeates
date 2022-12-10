@@ -1,12 +1,17 @@
+import React, { useEffect, useState } from 'react';
 import './_footer.scss';
 
 function Footer() {
+    const [currentYear, setYear] = useState();
+    
+    useEffect(() => {
+        const d = new Date(); 
+        setYear(d.getFullYear());
+    }, [])
+        
     return (
         <footer className='footer'>
-            © 2022 Copyright:
-            <a href="https://github.com/mrsjlwhite"> Candace Jackson </a>
-            &#38;
-            <a href="https://github.com/mrsjlwhite"> Jeslyn White</a>
+            Copyright &#169; {currentYear} Candace Jackson.
         </footer>
     )
 }

@@ -1,4 +1,4 @@
-// colors
+//colors
 $light-beige: #FAFDF3;
 $sage: #B2AC88;
 $cambridge-blue: #9EB4A7;
@@ -21,4 +21,21 @@ $font-body: BrandonGrotesque;
 @font-face {
     font-family: BrandonGrotesque;
     src: url(../assets/fonts/brandon-grotesque-black.otf);
+}
+
+//shared styles
+@mixin image-hover {
+    border-radius: 5px;
+    box-shadow: 0 1px 2px $box-shadow;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    &:hover {
+        -webkit-transform: scale(1.03, 1.03);
+        transform: scale(1.03, 1.03);
+
+        box-shadow: 7px 7px 8px $box-shadow;
+        -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
 }

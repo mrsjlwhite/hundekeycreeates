@@ -1,28 +1,56 @@
-@import '../../styles/_variables';
+@import '../../styles/_variables.scss';
 
 .contact-me {
     height: 100vh;
     margin-top: 4rem;
     text-align: center;
 
-    p,
-    span,
-    a {
-        font-family: $font-body;
-        letter-spacing: 2px;
-    }
-
     .contact-title {
         color: $hookers-green;
         font-family: $font-title;
         text-align: center;
-        margin-bottom: 25px;
+        margin-bottom: 35px;
+    }
+
+    .contact-desc,
+    .contact-link {
+        color: $font-color;
+        font-family: $font-body;
+        letter-spacing: 2px;
+    }
+
+    .contact-link {
+        margin: 3rem;
+        font-family: $font-title;
+
+        p {
+            margin-top: .8rem;
+        }
+
+        &:hover {
+            color: $hookers-green;
+            cursor: pointer;
+        }
     }
 }
 
 @media only screen and (max-width: 768px) {
     .contact-me {
         margin-top: 0;
-        height: 50vh;
+        height: 53vh;
+    }
+
+    .contact-link {
+        p {
+            font-size: 30px;
+            margin-top: 3rem !important;
+        }
+
+        .fa-instagram {
+            font-size: 80px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 80px;
+        }
     }
 }

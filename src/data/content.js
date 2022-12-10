@@ -5,9 +5,17 @@ const Content = [
     },
     {
         name: 'contact',
-        description: 'Please dont really reach me at...',
-        link: 'google.com',
-        linkName: 'this website.'
+        description: 'Please dont really reach me at... ',
+        instagrams: [
+            {
+                handle: '@hundekey',
+                link: 'https://www.instagram.com/hundekey/'
+            },
+            {
+                handle: '@hundekeycreeates_',
+                link: 'https://www.instagram.com/hundekeycreeates_/'
+            },
+        ]
     }
 ];
 
