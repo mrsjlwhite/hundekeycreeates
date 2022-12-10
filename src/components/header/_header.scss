@@ -4,41 +4,42 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
-
+    
     .logo-figure {
         margin-left: 4rem;
         margin-top: 2rem;
-
+        
         .logo {
             max-height: 185px;
         }
 
         figcaption {
             color: $sage;
-            font-size: 18px;
             font-family: $font-title;
+            font-size: 18px;
             font-weight: 800;
             letter-spacing: .1rem;
         }
     }
 
     .top-plant {
-        max-height: 250px;
         margin-top: 0.5rem;
+        max-height: 250px;
     }
 }
 
 @media only screen and (max-width: 768px) {
+    
     .logo {
-        max-height: 300px !important;
         margin-left: 3rem;
+        max-height: 300px !important;
     }
 
     .logo-figure {
         display: flex;
-        justify-items: center;
         flex-direction: column;
-
+        justify-items: center;
+        
         figcaption {
             margin-left: 3rem;
         }

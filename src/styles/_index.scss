@@ -1,8 +1,8 @@
 @import '../styles/_variables.scss';
 
 body {
-  margin: 0;
-  font-family: BrandonGrotesque, 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: BrandonGrotesque, 'Helvetica Neue', sans-serif;
+  margin: 0;
 }

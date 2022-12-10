@@ -2,24 +2,26 @@
 
 .art-gallery {
     display: grid;
-    grid-template-columns: auto auto auto;
     grid-gap: 1rem;
+    grid-template-columns: auto auto auto;
     margin: 3rem 0;
-
+    
     img {
-        @include image-hover;
-        display: flex;
         align-self: center;
+        cursor: pointer;
+        display: flex;
         max-height: 975px;
+        @include image-hover;
     }
 }
 
 @media only screen and (max-width: 768px) {
+    
     .art-gallery {
         display: grid;
-        grid-template-columns: 1fr;
-        padding: 1em;
         grid-row-gap: 30px;
+        grid-template-columns: 1fr;
         margin: 2rem;
+        padding: 1em;
     }
 }
