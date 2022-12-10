@@ -7,7 +7,7 @@ function Footer() {
     useEffect(() => {
         const d = new Date(); 
         setYear(d.getFullYear());
-    })
+    }, [])
         
     return (
         <footer className='footer'>

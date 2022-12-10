@@ -8,15 +8,4 @@
     margin-left: 1rem;
     padding: 2rem;
     text-align: left;
-
-    a {
-        color: $font-color;
-        text-decoration: none;
-        transition: 0.3s;
-
-        &:hover {
-            color: $hookers-green;
-            font-weight: 700;
-        }
-    }
 }
