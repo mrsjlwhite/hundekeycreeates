@@ -3,10 +3,12 @@
 .art-gallery {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-gap: 2rem;
+    grid-gap: 1rem;
     margin: 3rem 0;
 
     img {
+        display: flex;
+        align-self: center;
         max-height: 975px;
         border-radius: 5px;
         box-shadow: 0 1px 2px $box-shadow;
@@ -14,8 +16,8 @@
         transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 
         &:hover {
-            -webkit-transform: scale(1.10, 1.10);
-            transform: scale(1.10, 1.10);
+            -webkit-transform: scale(1.03, 1.03);
+            transform: scale(1.03, 1.03);
 
             box-shadow: 7px 7px 8px $box-shadow;
             -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
