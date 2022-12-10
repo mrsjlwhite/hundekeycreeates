@@ -44,13 +44,13 @@ const createImageObjects = (count, categoryId) => {
         
         const name = `${category.filename}(${i}).jpg`;
         // const path = `img/${name}`; //deployedPath
-        const path = `/public/img/${name}`; //localPath
+        const path = `../../../public/img/${name}`; //localPath
         
         Art.push({
             id: Art.length + 1,
             filename: name,
             categoryId: categoryId,
-            original: path,
+            path: path,
             originalAlt: category.name
         });
     }   
