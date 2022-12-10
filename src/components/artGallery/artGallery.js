@@ -15,7 +15,8 @@ function ArtGallery({selectedCategoryId}) {
                     return (
                             <img key={art.id} 
                                  className="img-fluid" 
-                                 src={`img/${art.filename}`} 
+                                 src={`img/${art.filename}`} //deployedPath 
+                                 //src={require(`/public/img/${art.filename}`)} //localPath
                                  alt={art.filename} />
                     )
                 })}

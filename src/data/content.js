@@ -6,7 +6,7 @@ const Content = [
     {
         name: 'contact',
         description: 'Please dont really reach me at... ',
-        link: 'https://www.instagram.com/'
+        link: 'https://www.instagram.com/hundekey/'
     }
 ];
 
