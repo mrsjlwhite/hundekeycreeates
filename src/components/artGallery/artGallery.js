@@ -17,48 +17,14 @@ function ArtGallery({ selectedCategoryId }) {
             return (
                 <img key={artObj.id}
                     className="img-fluid"
-                    //src={`img/${artObj.filename}`} //deployedPath 
-                    src={require(`/public/img/${artObj.filename}`)} //localPath
+                    src={`img/${artObj.filename}`} //deployedPath 
+                    // src={require(`/public/img/${artObj.filename}`)} //localPath
                     onClick={() => onImageClick(artObj.id)}
                     alt={artObj.filename} />
             )
         })
         setArtPieces(mappedArt);
     }, [selectedCategoryId]);
-    //     const outsideModalClicked = () => {
-    //         setGalleryClass("art-gallery");
-    //         setShowCarousel(false);
-    //         setSelectedImageId(null);
-    //     };
-
-    //     const handleClickOutsideModal = (event) => {
-    //         if (galleryRef.current && !galleryRef.current.contains(event.target)) {
-    //             outsideModalClicked();
-    //         } else {
-    //             // setSelectedImageId(selectedImageId + 1)
-    //         }
-    //     };
-
-    //     const body = document.getElementsByTagName("body");
-    //     const galleryEl = document.getElementById(galleryId);
-    //     body.addEventListener("click", (e) => handleClickOutsideModal(e))
-    //     galleryEl.addEventListener("click", (e) => e.stopPropagation());
-
-    //     // galleryEl.addEventListener("click", handleClickOutsideModal, false);
-
-    //     return () => {
-    //         // galleryEl.removeEventListener("click", handleClickOutsideModal, false);
-    //         galleryEl.removeEventListener("click", (e) => e.stopPropagation());
-
-    //     };
-    //     // $('body').on('click', function(e) {
-    //     //     $('#carouSel').hide();
-    //     //  });
-
-    //     //  $('#carouSel').on('click', function(e) {
-    //     //     e.stopPropagation();
-    //     //  });
-    // }, [selectedImageId]);
 
     const onImageClick = (imageId) => {
         setSelectedImageId(imageId);

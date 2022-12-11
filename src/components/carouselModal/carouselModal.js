@@ -19,8 +19,8 @@ function CarouselModal({ selectedImageId, setShowModal, showModal }) {
                 <Carousel.Item key={artObj.id}>
                     <img
                         className="carousel-image"
-                        //src={`img/${art.filename}`} //deployedPath 
-                        src={require(`/public/img/${artObj.filename}`)} //localPath
+                        src={`img/${artObj.filename}`} //deployedPath 
+                        // src={require(`/public/img/${artObj.filename}`)} //localPath
                         alt={artObj.originalAlt}
                     />
                 </Carousel.Item>

@@ -41,11 +41,11 @@ const Art = [];
 const createImageObjects = (count, categoryId) => {
     for (let i = 0; i < count; i++) {
         const category = Categories.find(c => c.id === categoryId);
-        
+
         const name = `${category.filename}(${i}).jpg`;
-        // const path = `img/${name}`; //deployedPath
-        const path = `../../../public/img/${name}`; //localPath
-        
+        const path = `img/${name}`; //deployedPath
+        // const path = `../../../public/img/${name}`; //localPath
+
         Art.push({
             id: Art.length + 1,
             filename: name,
@@ -53,40 +53,40 @@ const createImageObjects = (count, categoryId) => {
             path: path,
             originalAlt: category.name
         });
-    }   
+    }
 }
 
 Categories.forEach(category => {
-    switch(category.filename) {
+    switch (category.filename) {
         case typography:
             createImageObjects(typographyCount, typographyId);
-        break;
+            break;
         case drawing:
             createImageObjects(drawingCount, drawingId);
-        break;
+            break;
         case graphicDesign:
             createImageObjects(graphicDesignCount, graphicDesignId);
-        break;
+            break;
         case photography:
             createImageObjects(photographyCount, photographyId);
-        break;
+            break;
         case creativeThinking:
             createImageObjects(creativeThinkingCount, creativeThinkingId);
-        break;
+            break;
         case tdDesign:
             createImageObjects(tdDesigngCount, tdDesignId);
-        break;
+            break;
         case ceramics:
             createImageObjects(ceramicsCount, ceramicsId);
-        break;
+            break;
         case painting:
             createImageObjects(paintingCount, paintingId);
-        break;
+            break;
         case illustrations:
             createImageObjects(illustrationsCount, illustrationsId);
-        break;
-    default:
-        break;
+            break;
+        default:
+            break;
     }
 });
 
