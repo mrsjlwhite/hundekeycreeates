@@ -3,7 +3,7 @@ import "./_carouselModal.scss";
 import Carousel from 'react-bootstrap/Carousel';
 import Art from "../../data/art";
 
-function CarouselModal() {
+function CarouselModal({ selectedImageId }) {
     const [carouselArtItems, setCarouselItems] = useState([]);
 
     useEffect(() => {
@@ -27,7 +27,9 @@ function CarouselModal() {
 
     return (
         <Carousel className="carousel-modal"
-                  indicators={false}>
+            indicators={false}
+            interval={null}
+            activeIndex={selectedImageId - 1}>
             {carouselArtItems}
         </Carousel>
     );

@@ -1,23 +1,24 @@
 @import "../../styles/variables";
 
 .carousel-modal {
-    left: 40%;
-    margin-left: -100px;
+    left: 20%;
+    padding-bottom: .5rem;
     position: fixed;
     top: 1%;
-    width: 80vh;
-    padding-bottom: .5rem;
 
     .carousel-image {
         height: 97vh;
+        width: 100vh;
     }
 
     .carousel-caption {
+        align-items: center;
         color: $smokey-black;
+        display: flex;
         font-family: $font-title;
         font-weight: 700;
+        justify-content: center;
         letter-spacing: .1rem;
-        text-align: center;
 
         h3 {
             background-color: $sage-faded;
