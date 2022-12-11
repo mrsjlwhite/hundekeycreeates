@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./_carouselModal.scss";
 import Carousel from 'react-bootstrap/Carousel';
 import Art from "../../data/art";
 
@@ -10,12 +11,12 @@ function CarouselModal() {
             return (
                 <Carousel.Item key={artObj.id}>
                     <img
-                        className="d-block w-100"
+                        className="carousel-image"
                         //src={`img/${art.filename}`} //deployedPath 
                         src={require(`/public/img/${artObj.filename}`)} //localPath
                         alt={artObj.originalAlt}
                     />
-                    <Carousel.Caption>
+                    <Carousel.Caption className="carousel-caption">
                         <h3>{artObj.originalAlt}</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -25,7 +26,8 @@ function CarouselModal() {
     }, []);
 
     return (
-        <Carousel>
+        <Carousel className="carousel-modal"
+                  indicators={false}>
             {carouselArtItems}
         </Carousel>
     );

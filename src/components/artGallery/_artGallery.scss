@@ -1,23 +1,46 @@
 @import '../../styles/_variables.scss';
 
-.art-gallery {
+.art-gallery,
+.art-gallery-faded {
+    cursor: pointer;
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: auto auto auto;
     margin: 3rem 0;
-    
+
     img {
         align-self: center;
-        cursor: pointer;
         display: flex;
         max-height: 975px;
+    }
+}
+
+.art-gallery {
+    z-index: 100;
+
+
+    img {
+
         @include image-hover;
     }
 }
 
+.art-gallery-faded {
+    opacity: .1;
+}
+
+.carousel-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 101;
+}
+
 @media only screen and (max-width: 768px) {
-    
-    .art-gallery {
+
+    .art-gallery,
+    .art-gallery-faded {
         display: grid;
         grid-row-gap: 30px;
         grid-template-columns: 1fr;

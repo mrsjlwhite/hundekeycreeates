@@ -7,19 +7,24 @@ import CarouselModal from "../carouselModal/carouselModal";
 function ArtGallery({ selectedCategoryId }) {
     const [showCarousel, setShowCarousel] = useState(false);
     const [artPieces, setArtPieces] = useState([]);
+    const [galleryClass, setGalleryClass] = useState("art-gallery");
+
+    const onImageClick = () => {
+        setShowCarousel(true);
+        setGalleryClass("art-gallery-faded");
+    };
 
     useEffect(() => {
         const mappedArt = Art.map((artObj) => {
             if (selectedCategoryId !== artObj.categoryId && selectedCategoryId !== 0) {
                 return null;
             }
-
             return (
                 <img key={artObj.id}
                     className="img-fluid"
                     //src={`img/${artObj.filename}`} //deployedPath 
                     src={require(`/public/img/${artObj.filename}`)} //localPath
-                    onClick={() => setShowCarousel(true)}
+                    onClick={onImageClick}
                     alt={artObj.filename} />
             )
         })
@@ -28,13 +33,13 @@ function ArtGallery({ selectedCategoryId }) {
 
     return (
         <Container>
-            <div className="art-gallery">
-                {!showCarousel && artPieces}
-            </div>
             <div className="carousel-container">
                 {showCarousel &&
                     <CarouselModal></CarouselModal>
                 }
+            </div>
+            <div className={galleryClass}>
+                {artPieces}
             </div>
         </Container>
     )

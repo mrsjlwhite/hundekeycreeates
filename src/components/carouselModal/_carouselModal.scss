@@ -1,0 +1,29 @@
+@import "../../styles/variables";
+
+.carousel-modal {
+    left: 40%;
+    margin-left: -100px;
+    position: fixed;
+    top: 1%;
+    width: 80vh;
+    padding-bottom: .5rem;
+
+    .carousel-image {
+        height: 97vh;
+    }
+
+    .carousel-caption {
+        color: $smokey-black;
+        font-family: $font-title;
+        font-weight: 700;
+        letter-spacing: .1rem;
+        text-align: center;
+
+        h3 {
+            background-color: $sage-faded;
+            border-radius: 120%;
+            padding: 1rem;
+            width: 70%;
+        }
+    }
+}
