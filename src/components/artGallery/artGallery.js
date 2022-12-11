@@ -6,25 +6,31 @@ import CarouselModal from "../carouselModal/carouselModal";
 
 function ArtGallery({ selectedCategoryId }) {
     const [artPieces, setArtPieces] = useState([]);
-    const [selectedImageId, setSelectedImageId] = useState(null);
+    const [carouselArt, setCarouselArt] = useState([]);
+    const [selectedImageId, setSelectedImageId] = useState(0);
     const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
+        const selectedArt = [];
         const mappedArt = Art.map((artObj) => {
             if (selectedCategoryId !== artObj.categoryId && selectedCategoryId !== 0) {
                 return null;
             }
+
+            selectedArt.push(artObj);
+
             return (
                 <img key={artObj.id}
                     className="img-fluid"
-                    src={`img/${artObj.filename}`} //deployedPath 
-                    // src={require(`/public/img/${artObj.filename}`)} //localPath
+                    // src={`img/${artObj.filename}`} //deployedPath 
+                    src={require(`/public/img/${artObj.filename}`)} //localPath
                     onClick={() => onImageClick(artObj.id)}
                     alt={artObj.filename} />
             )
         })
         setArtPieces(mappedArt);
-    }, [selectedCategoryId]);
+        setCarouselArt(selectedArt);
+    }, [selectedCategoryId, setArtPieces, setCarouselArt]);
 
     const onImageClick = (imageId) => {
         setSelectedImageId(imageId);
@@ -34,7 +40,9 @@ function ArtGallery({ selectedCategoryId }) {
     return (
         <Container>
             <CarouselModal
+                selectedArtPieces={carouselArt}
                 selectedImageId={selectedImageId}
+                setSelectedImageId={setSelectedImageId}
                 setShowModal={setShowModal}
                 showModal={showModal}>
             </CarouselModal>
