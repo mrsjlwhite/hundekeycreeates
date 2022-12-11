@@ -6,6 +6,7 @@
 
 .about-me {
   text-align: center;
+  
 
   .about-title {
     color: $hookers-green;
@@ -14,22 +15,25 @@
   }
 
   .about-desc {
-    font-family: $font-body;
     display: flex;
+    font-family: $font-body;
     justify-content: center;
-    margin-top: 250px;
     letter-spacing: 2px;
     line-height: 40px;
+    margin-top: 250px;
   }
 
   img {
+    
     @include image-hover;
   }
 }
 
 @media only screen and (max-width: 768px) {
+  
   .about-me {
     margin-top: 0;
+    
 
     .about-desc {
       margin: 0 1rem 3rem 1rem;

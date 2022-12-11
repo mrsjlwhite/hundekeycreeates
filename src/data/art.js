@@ -38,47 +38,55 @@ const paintingCount = 3;
 
 const Art = [];
 
-const createImageObjects = (count, filename, categoryId) => {
+const createImageObjects = (count, categoryId) => {
     for (let i = 0; i < count; i++) {
+        const category = Categories.find(c => c.id === categoryId);
+
+        const name = `${category.filename}(${i}).jpg`;
+        const path = `img/${name}`; //deployedPath
+        // const path = `../../../public/img/${name}`; //localPath
+
         Art.push({
             id: Art.length + 1,
-            filename: `${filename}(${i}).jpg`,
+            filename: name,
             categoryId: categoryId,
+            path: path,
+            originalAlt: category.name
         });
-    }   
+    }
 }
 
 Categories.forEach(category => {
-    switch(category.filename) {
+    switch (category.filename) {
         case typography:
-            createImageObjects(typographyCount, typography, typographyId);
-        break;
+            createImageObjects(typographyCount, typographyId);
+            break;
         case drawing:
-            createImageObjects(drawingCount, drawing, drawingId);
-        break;
+            createImageObjects(drawingCount, drawingId);
+            break;
         case graphicDesign:
-            createImageObjects(graphicDesignCount, graphicDesign, graphicDesignId);
-        break;
+            createImageObjects(graphicDesignCount, graphicDesignId);
+            break;
         case photography:
-            createImageObjects(photographyCount, photography, photographyId);
-        break;
+            createImageObjects(photographyCount, photographyId);
+            break;
         case creativeThinking:
-            createImageObjects(creativeThinkingCount, creativeThinking, creativeThinkingId);
-        break;
+            createImageObjects(creativeThinkingCount, creativeThinkingId);
+            break;
         case tdDesign:
-            createImageObjects(tdDesigngCount, tdDesign, tdDesignId);
-        break;
+            createImageObjects(tdDesigngCount, tdDesignId);
+            break;
         case ceramics:
-            createImageObjects(ceramicsCount, ceramics, ceramicsId);
-        break;
+            createImageObjects(ceramicsCount, ceramicsId);
+            break;
         case painting:
-            createImageObjects(paintingCount, painting, paintingId);
-        break;
+            createImageObjects(paintingCount, paintingId);
+            break;
         case illustrations:
-            createImageObjects(illustrationsCount, illustrations, illustrationsId);
-        break;
-    default:
-        break;
+            createImageObjects(illustrationsCount, illustrationsId);
+            break;
+        default:
+            break;
     }
 });
 

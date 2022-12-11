@@ -4,56 +4,7 @@
   background-color: $floral-white;
 }
 
-.header-images {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-
-  .logo-figure {
-    margin-left: 4rem;
-    margin-top: 2rem;
-
-    .logo {
-      max-height: 185px;
-    }
-
-    figcaption {
-      color: $sage;
-      font-size: 18px;
-      font-family: $font-title;
-      font-weight: 800;
-      letter-spacing: .1rem;
-    }
-  }
-
-  .top-plant {
-    max-height: 250px;
-    margin-top: 0.5rem;
-  }
-}
-
 .bottom-plant {
   margin-top: -250px;
   width: 100%;
-}
-
-@media only screen and (max-width: 768px) {
-  .logo {
-    max-height: 300px !important;
-    margin-left: 3rem;
-  }
-
-  .logo-figure {
-    display: flex;
-    justify-items: center;
-    flex-direction: column;
-
-    figcaption {
-      margin-left: 3rem;
-    }
-  }
-
-  .top-plant {
-    display: none;
-  }
 }

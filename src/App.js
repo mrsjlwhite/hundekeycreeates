@@ -3,12 +3,11 @@ import MyNavbar from './components/navbar/navbar';
 import ArtGallery from './components/artGallery/artGallery';
 import { useState } from 'react';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import logo from './assets/img/logo.png';
 import vine from './assets/img/vine.png';
-import watercolorVine from './assets/img/watercolor-plant.png';
 import Footer from './components/footer/footer';
 import AboutMe from './components/aboutMe/aboutMe';
 import ContactMe from './components/contactMe/contactMe';
+import Header from './components/header/header';
 
 function App() {
   const [selectedCategoryId, setSelectedCategoryId] = useState(0);
@@ -29,13 +28,7 @@ function App() {
 
   return (
     <div className="app">
-      <header className='header-images'>
-        <figure className='logo-figure'>
-          <img className='logo' src={logo} alt='logo'></img>
-          <figcaption>Candace C. Jackson</figcaption>
-        </figure>
-        <img className='top-plant animate__fadeIn' src={watercolorVine} alt="vine"></img>
-      </header>
+      <Header></Header>
       <MyNavbar 
         setSelectedCategoryId={setSelectedCategoryId}
         setShowGallery={setShowGallery}

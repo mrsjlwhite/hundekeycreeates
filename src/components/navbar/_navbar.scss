@@ -3,14 +3,14 @@
 .navbar-contents {
     background-color: transparent;
     justify-content: right;
-
+    
     .main-link {
         color: $sage;
         font-size: 18px;
         font-weight: 250;
         letter-spacing: .2rem;
         text-transform: uppercase;
-
+        
         a {
             color: $sage;
         }
@@ -21,9 +21,10 @@
     }
 
     .child-link {
+        
         &:hover {
-            color: $light-beige;
             background-color: $sage;
+            color: $light-beige;
             font-weight: 500;
         }
     }
