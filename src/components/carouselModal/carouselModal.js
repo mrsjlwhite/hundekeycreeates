@@ -14,10 +14,6 @@ function CarouselModal({ selectedArtPieces, selectedImageId, setSelectedImageId,
         }
 
         const mappedArt = selectedArtPieces.map((artObj) => {
-            if (artObj.id === activeGalleryIndex + 1) {
-                setModalTitle(artObj.originalAlt);
-            }
-
             return (
                 <Carousel.Item key={artObj.id}>
                     <img
@@ -30,7 +26,7 @@ function CarouselModal({ selectedArtPieces, selectedImageId, setSelectedImageId,
             )
         })
         setCarouselItems(mappedArt);
-    }, [selectedArtPieces, activeGalleryIndex, setModalTitle, setCarouselItems]);
+    }, [selectedArtPieces, activeGalleryIndex, setCarouselItems]);
     //#endregion
 
     //#region Setting Selected Image
@@ -38,8 +34,9 @@ function CarouselModal({ selectedArtPieces, selectedImageId, setSelectedImageId,
         if (selectedImageId && selectedArtPieces.length) {
             const index = selectedArtPieces.findIndex(a => a.id === selectedImageId);
             setActiveGalleryIndex(index);
+            setModalTitle(selectedArtPieces[index].originalAlt);
         }
-    }, [selectedImageId, selectedArtPieces]);
+    }, [selectedImageId, selectedArtPieces, setModalTitle]);
     //#endregion
 
     //#region Handle Arrow Clicks
