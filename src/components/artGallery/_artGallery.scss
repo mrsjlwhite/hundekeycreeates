@@ -11,17 +11,18 @@
         align-self: center;
         display: flex;
         max-height: 975px;
+
         @include image-hover;
     }
 }
 
 @media only screen and (max-width: 768px) {
 
-    .art-gallery {
+    .art-gallery-container {
         display: grid;
         grid-row-gap: 30px;
         grid-template-columns: 1fr;
-        margin: 2rem;
-        padding: 1em;
+        margin: .5rem;
+        padding: .5rem;
     }
 }

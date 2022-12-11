@@ -28,3 +28,18 @@
         width: 100vh;
     }
 }
+
+@media only screen and (max-width: 780px) {
+
+    .carousel-modal {
+        height: 97vh;
+        top: 1%;
+    }
+
+    .carousel-image {
+        height: 100% !important;
+        object-fit: scale-down !important;
+        width: 100% !important;
+        //
+    }
+}

@@ -8,6 +8,7 @@ function CarouselModal({ selectedImageId, setShowModal, showModal }) {
     const [activeGalleryIndex, setActiveGalleryIndex] = useState(0);
     const [modalTitle, setModalTitle] = useState("");
 
+    //#region MappedCarouselItems
     useEffect(() => {
         const mappedArt = Art.map((artObj) => {
             if (artObj.id === activeGalleryIndex + 1) {
@@ -27,12 +28,16 @@ function CarouselModal({ selectedImageId, setShowModal, showModal }) {
         })
         setCarouselItems(mappedArt);
     }, [activeGalleryIndex, setModalTitle, setCarouselItems]);
+    //#endregion
 
+    //#region Setting Selected Image
     useEffect(() => {
         const index = selectedImageId ? selectedImageId - 1 : 0;
         setActiveGalleryIndex(index);
     }, [selectedImageId]);
+    //#endregion
 
+    //# Handle Arrow Clicks
     useEffect(() => {
         const artItemsIndexMax = carouselArtItems.length - 1;
 
@@ -65,6 +70,7 @@ function CarouselModal({ selectedImageId, setShowModal, showModal }) {
             }
         }
     }, [carouselArtItems, setActiveGalleryIndex, activeGalleryIndex]);
+    //#endregion
 
     return (
         <Modal
