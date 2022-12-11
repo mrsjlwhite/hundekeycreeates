@@ -1,22 +1,13 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import './_artGallery.scss';
 import Container from "react-bootstrap/esm/Container";
 import Art from "../../data/art";
 import CarouselModal from "../carouselModal/carouselModal";
 
 function ArtGallery({ selectedCategoryId }) {
-    const galleryRef = useRef(null);
-    const [showCarousel, setShowCarousel] = useState(false);
     const [artPieces, setArtPieces] = useState([]);
-    const [galleryClass, setGalleryClass] = useState("art-gallery");
     const [selectedImageId, setSelectedImageId] = useState(null);
-    const galleryId = 'artGalleryId';
-
-    const onImageClick = (imageId) => {
-        setGalleryClass("art-gallery-faded");
-        setSelectedImageId(imageId);
-        setShowCarousel(true);
-    };
+    const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
         const mappedArt = Art.map((artObj) => {
@@ -34,8 +25,6 @@ function ArtGallery({ selectedCategoryId }) {
         })
         setArtPieces(mappedArt);
     }, [selectedCategoryId]);
-
-    // useEffect(() => {
     //     const outsideModalClicked = () => {
     //         setGalleryClass("art-gallery");
     //         setShowCarousel(false);
@@ -71,16 +60,19 @@ function ArtGallery({ selectedCategoryId }) {
     //     //  });
     // }, [selectedImageId]);
 
+    const onImageClick = (imageId) => {
+        setSelectedImageId(imageId);
+        setShowModal(true);
+    };
+
     return (
         <Container>
-            <div className="carousel-container">
-                {showCarousel &&
-                    <CarouselModal selectedImageId={selectedImageId}></CarouselModal>
-                }
-            </div>
-            <div id={galleryId}
-                className={galleryClass}
-                ref={galleryRef}>
+            <CarouselModal
+                selectedImageId={selectedImageId}
+                setShowModal={setShowModal}
+                showModal={showModal}>
+            </CarouselModal>
+            <div className="art-gallery-container">
                 {artPieces}
             </div>
         </Container>
