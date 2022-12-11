@@ -7,12 +7,10 @@ function CarouselModal({ selectedImageId, setShowModal, showModal }) {
     const [carouselArtItems, setCarouselItems] = useState([]);
     const [activeGalleryIndex, setActiveGalleryIndex] = useState(0);
     const [modalTitle, setModalTitle] = useState("");
-    // const leftKey = 37;
-    // const rightKey = 39;
 
     useEffect(() => {
         const mappedArt = Art.map((artObj) => {
-            if (artObj.id === activeGalleryIndex - 1) {
+            if (artObj.id === activeGalleryIndex + 1) {
                 setModalTitle(artObj.originalAlt);
             }
 
@@ -35,26 +33,55 @@ function CarouselModal({ selectedImageId, setShowModal, showModal }) {
         setActiveGalleryIndex(index);
     }, [selectedImageId]);
 
-    const handleClose = () => setShowModal(false);
+    useEffect(() => {
+        const artItemsIndexMax = carouselArtItems.length - 1;
+
+        const handleArrowClicked = (index, direction) => {
+            if (activeGalleryIndex === 0 && direction === "prev") {
+                setActiveGalleryIndex(artItemsIndexMax);
+                return;
+            }
+
+            if (activeGalleryIndex === artItemsIndexMax && direction === "next") {
+                setActiveGalleryIndex(0);
+                return;
+            }
+
+            setActiveGalleryIndex(index);
+        }
+
+        const onPrevArrowClicked = () => handleArrowClicked(activeGalleryIndex - 1, "prev");
+        const onNextArrowClicked = () => handleArrowClicked(activeGalleryIndex + 1, "next");
+
+        const prevArrow = document.getElementsByClassName("carousel-control-prev")[0];
+        const nextArrow = document.getElementsByClassName("carousel-control-next")[0];
+
+        if (prevArrow && nextArrow) {
+            prevArrow.addEventListener('click', onPrevArrowClicked);
+            nextArrow.addEventListener('click', onNextArrowClicked);
+            return () => {
+                prevArrow.removeEventListener('click', onPrevArrowClicked);
+                nextArrow.removeEventListener('click', onNextArrowClicked);
+            }
+        }
+    }, [carouselArtItems, setActiveGalleryIndex, activeGalleryIndex]);
 
     return (
         <Modal
             show={showModal}
             className="carousel-modal"
-            onHide={handleClose}
-            size="lg"
-            tabIndex="1"
-            keyboard={true}>
+            onHide={() => setShowModal(false)}
+            size="lg">
             <Modal.Header className="modal-title" closeButton>
                 {modalTitle}
             </Modal.Header>
             <Modal.Body>
                 <Carousel
                     className="carousel-in-modal"
+                    variant="dark"
                     indicators={false}
                     interval={null}
-                    activeIndex={activeGalleryIndex}
-                    keyboard={true}>
+                    activeIndex={activeGalleryIndex}>
                     {carouselArtItems}
                 </Carousel>
             </Modal.Body>
