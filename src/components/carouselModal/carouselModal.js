@@ -1,18 +1,34 @@
 import React, { useEffect, useState } from "react";
 import "./_carouselModal.scss";
-import Art from "../../data/art";
 import { Carousel, Modal } from "react-bootstrap";
+import ceramicsVideo from "../../assets/vid/ceramics.mp4";
 
-function CarouselModal({ selectedImageId, setShowModal, showModal }) {
-    const [carouselArtItems, setCarouselItems] = useState([]);
+function CarouselModal({ selectedArtPieces, selectedImageId, setSelectedImageId, setShowModal, showModal }) {
+    const [artCarouselItems, setCarouselItems] = useState([]);
     const [activeGalleryIndex, setActiveGalleryIndex] = useState(0);
     const [modalTitle, setModalTitle] = useState("");
 
     //#region MappedCarouselItems
     useEffect(() => {
-        const mappedArt = Art.map((artObj) => {
-            if (artObj.id === activeGalleryIndex + 1) {
-                setModalTitle(artObj.originalAlt);
+        if (!selectedArtPieces || !selectedArtPieces.length) {
+            return;
+        }
+
+        const mappedArt = selectedArtPieces.map((artObj) => {
+            if (artObj.isVideo) {
+                return (
+                    <Carousel.Item key={artObj.id}>
+                        <video
+                            key={artObj.id}
+                            className="carousel-video"
+                            width="500px"
+                            controls
+                            autoPlay
+                            muted>
+                            <source src={ceramicsVideo} type="video/mp4"></source>
+                        </video>
+                    </Carousel.Item >
+                )
             }
 
             return (
@@ -27,49 +43,60 @@ function CarouselModal({ selectedImageId, setShowModal, showModal }) {
             )
         })
         setCarouselItems(mappedArt);
-    }, [activeGalleryIndex, setModalTitle, setCarouselItems]);
+    }, [selectedArtPieces, activeGalleryIndex, setCarouselItems]);
     //#endregion
 
     //#region Setting Selected Image
     useEffect(() => {
-        const index = selectedImageId ? selectedImageId - 1 : 0;
-        setActiveGalleryIndex(index);
-    }, [selectedImageId]);
+        if (selectedImageId && selectedArtPieces.length) {
+            const index = selectedArtPieces.findIndex(a => a.id === selectedImageId);
+            setActiveGalleryIndex(index);
+            setModalTitle(selectedArtPieces[index].originalAlt);
+        }
+    }, [selectedImageId, selectedArtPieces, setModalTitle]);
     //#endregion
 
-    //# Handle Arrow Clicks
+    //#region Handle Arrow Clicks
     useEffect(() => {
-        const artItemsIndexMax = carouselArtItems.length - 1;
+        const prevArrow = document.getElementsByClassName("carousel-control-prev")[0];
+        const nextArrow = document.getElementsByClassName("carousel-control-next")[0];
+
+        if (!prevArrow && !nextArrow && !showModal) {
+            return;
+        }
 
         const handleArrowClicked = (index, direction) => {
+            if (!selectedArtPieces || !selectedArtPieces.length) {
+                return;
+            }
+
+            const artItemsIndexMax = selectedArtPieces.length - 1;
+
             if (activeGalleryIndex === 0 && direction === "prev") {
-                setActiveGalleryIndex(artItemsIndexMax);
+                setSelectedImageId(selectedArtPieces[artItemsIndexMax].id);
                 return;
             }
 
             if (activeGalleryIndex === artItemsIndexMax && direction === "next") {
-                setActiveGalleryIndex(0);
+                setSelectedImageId(selectedArtPieces[0].id);
                 return;
             }
-
-            setActiveGalleryIndex(index);
+            setSelectedImageId(selectedArtPieces[index].id);
         }
 
-        const onPrevArrowClicked = () => handleArrowClicked(activeGalleryIndex - 1, "prev");
         const onNextArrowClicked = () => handleArrowClicked(activeGalleryIndex + 1, "next");
+        const onPrevArrowClicked = () => {
+            const index = activeGalleryIndex > 0 ? activeGalleryIndex - 1 : 0;
+            handleArrowClicked(index, "prev");
+        };
 
-        const prevArrow = document.getElementsByClassName("carousel-control-prev")[0];
-        const nextArrow = document.getElementsByClassName("carousel-control-next")[0];
-
-        if (prevArrow && nextArrow) {
-            prevArrow.addEventListener('click', onPrevArrowClicked);
-            nextArrow.addEventListener('click', onNextArrowClicked);
-            return () => {
-                prevArrow.removeEventListener('click', onPrevArrowClicked);
-                nextArrow.removeEventListener('click', onNextArrowClicked);
-            }
+        prevArrow.addEventListener('click', onPrevArrowClicked);
+        nextArrow.addEventListener('click', onNextArrowClicked);
+        return () => {
+            prevArrow.removeEventListener('click', onPrevArrowClicked);
+            nextArrow.removeEventListener('click', onNextArrowClicked);
         }
-    }, [carouselArtItems, setActiveGalleryIndex, activeGalleryIndex]);
+    }, [showModal, selectedArtPieces, setSelectedImageId, activeGalleryIndex]);
     //#endregion
 
     return (
@@ -88,7 +115,7 @@ function CarouselModal({ selectedImageId, setShowModal, showModal }) {
                     indicators={false}
                     interval={null}
                     activeIndex={activeGalleryIndex}>
-                    {carouselArtItems}
+                    {artCarouselItems}
                 </Carousel>
             </Modal.Body>
         </Modal>

@@ -1,3 +1,3 @@
-# hundekeycreeates
+# A Portfolio Template
 
-An art portfolio for Candace. 🪴🖼️
+An art portfolio template. 🪴🖼️
