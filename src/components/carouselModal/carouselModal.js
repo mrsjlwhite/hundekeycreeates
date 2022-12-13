@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./_carouselModal.scss";
 import { Carousel, Modal } from "react-bootstrap";
+import ceramicsVideo from "../../assets/vid/ceramics.mp4";
 
 function CarouselModal({ selectedArtPieces, selectedImageId, setSelectedImageId, setShowModal, showModal }) {
     const [artCarouselItems, setCarouselItems] = useState([]);
@@ -14,12 +15,28 @@ function CarouselModal({ selectedArtPieces, selectedImageId, setSelectedImageId,
         }
 
         const mappedArt = selectedArtPieces.map((artObj) => {
+            if (artObj.isVideo) {
+                return (
+                    <Carousel.Item key={artObj.id}>
+                        <video
+                            key={artObj.id}
+                            className="carousel-video"
+                            width="500px"
+                            controls
+                            autoPlay
+                            muted>
+                            <source src={ceramicsVideo} type="video/mp4"></source>
+                        </video>
+                    </Carousel.Item >
+                )
+            }
+
             return (
                 <Carousel.Item key={artObj.id}>
                     <img
                         className="carousel-image"
-                        // src={`img/${artObj.filename}`} //deployedPath 
-                        src={require(`/public/img/${artObj.filename}`)} //localPath
+                        src={`img/${artObj.filename}`} //deployedPath 
+                        // src={require(`/public/img/${artObj.filename}`)} //localPath
                         alt={artObj.originalAlt}
                     />
                 </Carousel.Item>

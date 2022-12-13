@@ -51,7 +51,8 @@ const createImageObjects = (count, categoryId) => {
             filename: name,
             categoryId: categoryId,
             path: path,
-            originalAlt: category.name
+            originalAlt: category.name,
+            isVideo: false
         });
     }
 }
