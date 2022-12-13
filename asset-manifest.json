@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.f0666fe3.css",
-    "main.js": "/static/js/main.0ab122c5.js",
+    "main.css": "/static/css/main.2ba4205a.css",
+    "main.js": "/static/js/main.abf11ea6.js",
     "static/js/787.1fc54727.chunk.js": "/static/js/787.1fc54727.chunk.js",
+    "static/media/ceramics.mp4": "/static/media/ceramics.466b27d158779b266559.mp4",
     "static/media/watercolor-plant.png": "/static/media/watercolor-plant.3f8087fa23918257ed7d.png",
     "static/media/PlayfairDisplay-VariableFont_wght.ttf": "/static/media/PlayfairDisplay-VariableFont_wght.3f7c141215e6d22d0f1e.ttf",
     "static/media/vine.png": "/static/media/vine.be066bea1313934a5dee.png",
@@ -10,12 +11,12 @@
     "static/media/brandon-grotesque-black.otf": "/static/media/brandon-grotesque-black.9ad36c335e917b52911d.otf",
     "static/media/logo.png": "/static/media/logo.ab74d6638e99cb0759d5.png",
     "index.html": "/index.html",
-    "main.f0666fe3.css.map": "/static/css/main.f0666fe3.css.map",
-    "main.0ab122c5.js.map": "/static/js/main.0ab122c5.js.map",
+    "main.2ba4205a.css.map": "/static/css/main.2ba4205a.css.map",
+    "main.abf11ea6.js.map": "/static/js/main.abf11ea6.js.map",
     "787.1fc54727.chunk.js.map": "/static/js/787.1fc54727.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f0666fe3.css",
-    "static/js/main.0ab122c5.js"
+    "static/css/main.2ba4205a.css",
+    "static/js/main.abf11ea6.js"
   ]
 }
