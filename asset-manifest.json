@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2ba4205a.css",
-    "main.js": "/static/js/main.abf11ea6.js",
+    "main.css": "/static/css/main.94246009.css",
+    "main.js": "/static/js/main.92cbd9d4.js",
     "static/js/787.1fc54727.chunk.js": "/static/js/787.1fc54727.chunk.js",
     "static/media/ceramics.mp4": "/static/media/ceramics.466b27d158779b266559.mp4",
     "static/media/watercolor-plant.png": "/static/media/watercolor-plant.3f8087fa23918257ed7d.png",
@@ -11,12 +11,12 @@
     "static/media/brandon-grotesque-black.otf": "/static/media/brandon-grotesque-black.9ad36c335e917b52911d.otf",
     "static/media/logo.png": "/static/media/logo.ab74d6638e99cb0759d5.png",
     "index.html": "/index.html",
-    "main.2ba4205a.css.map": "/static/css/main.2ba4205a.css.map",
-    "main.abf11ea6.js.map": "/static/js/main.abf11ea6.js.map",
+    "main.94246009.css.map": "/static/css/main.94246009.css.map",
+    "main.92cbd9d4.js.map": "/static/js/main.92cbd9d4.js.map",
     "787.1fc54727.chunk.js.map": "/static/js/787.1fc54727.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ba4205a.css",
-    "static/js/main.abf11ea6.js"
+    "static/css/main.94246009.css",
+    "static/js/main.92cbd9d4.js"
   ]
 }
