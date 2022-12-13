@@ -28,8 +28,13 @@ function App() {
 
   return (
     <div className="app">
-      <Header></Header>
-      <MyNavbar 
+      <Header
+        setSelectedCategoryId={setSelectedCategoryId}
+        setShowGallery={setShowGallery}
+        setShowAboutMe={setShowAboutMe}
+        setShowContactMe={setShowContactMe}>
+      </Header>
+      <MyNavbar
         setSelectedCategoryId={setSelectedCategoryId}
         setShowGallery={setShowGallery}
         setShowAboutMe={setShowAboutMe}
