@@ -25,8 +25,8 @@ function ArtGallery({ selectedCategoryId }) {
                 <img
                     key={artObj.id}
                     className="img-fluid"
-                    // src={`img/${artObj.filename}`} //deployedPath 
-                    src={require(`/public/img/${artObj.filename}`)} //localPath
+                    src={`img/${artObj.filename}`} //deployedPath 
+                    // src={require(`/public/img/${artObj.filename}`)} //localPath
                     onClick={() => onImageClick(artObj.id)}
                     alt={artObj.filename} />
             )
