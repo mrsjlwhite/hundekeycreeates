@@ -57,6 +57,15 @@ const createImageObjects = (count, categoryId) => {
     }
 }
 
+const createVideoObjects = (categoryId, alt) => {
+    Art.push({
+        id: Art.length + 1,
+        categoryId: categoryId,
+        originalAlt: alt,
+        isVideo: true
+    });
+}
+
 Categories.forEach(category => {
     switch (category.filename) {
         case typography:
@@ -79,6 +88,7 @@ Categories.forEach(category => {
             break;
         case ceramics:
             createImageObjects(ceramicsCount, ceramicsId);
+            createVideoObjects(ceramicsId, "Ceramics (Video)")
             break;
         case painting:
             createImageObjects(paintingCount, paintingId);

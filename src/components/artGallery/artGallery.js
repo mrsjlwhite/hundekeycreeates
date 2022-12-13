@@ -6,20 +6,28 @@ import CarouselModal from "../carouselModal/carouselModal";
 import ceramicsVideo from "../../assets/vid/ceramics.mp4";
 
 function ArtGallery({ selectedCategoryId }) {
-    const [artPieces, setArtPieces] = useState([]);
-    const [carouselArt, setCarouselArt] = useState([]);
+    const [categorySelectedArtwork, setCategorySelectedArtwork] = useState([]);
+    const [artGalleryPieces, setArtGalleryPieces] = useState([]);
     const [selectedImageId, setSelectedImageId] = useState(0);
     const [showModal, setShowModal] = useState(false);
-    const ceramicsId = 9;
 
     useEffect(() => {
-        const selectedArt = [];
-        const mappedArt = Art.map((artObj) => {
-            if (selectedCategoryId !== artObj.categoryId && selectedCategoryId !== 0) {
-                return null;
-            }
+        const selectedArtwork = selectedCategoryId === 0 ? Art : Art.filter(artObj => selectedCategoryId === artObj.categoryId);
+        setCategorySelectedArtwork(selectedArtwork);
+    }, [selectedCategoryId, setCategorySelectedArtwork])
 
-            selectedArt.push(artObj);
+    useEffect(() => {
+        const mappedArt = categorySelectedArtwork.map((artObj) => {
+            if (artObj.isVideo) {
+                return (
+                    <video
+                        key={artObj.id}
+                        className="img-fluid"
+                        onClick={() => onImageClick(artObj.id)}>
+                        <source src={ceramicsVideo} type="video/mp4"></source>
+                    </video>
+                )
+            }
 
             return (
                 <img
@@ -32,31 +40,8 @@ function ArtGallery({ selectedCategoryId }) {
             )
         })
 
-        if (selectedCategoryId === ceramicsId || selectedCategoryId === 0) {
-            const videoArtObj = {
-                id: Art.length + 1,
-                filename: "ceramics.mp4",
-                categoryId: ceramicsId,
-                originalAlt: "Ceramics (Video)",
-                isVideo: true
-            }
-
-            selectedArt.push(videoArtObj);
-
-            mappedArt.push((
-                <video
-                    key={videoArtObj.id}
-                    className="img-fluid"
-                    onClick={() => onImageClick(videoArtObj.id)}
-                    src={ceramicsVideo}
-                    type="video/mp4">
-                </video>
-            ))
-        }
-
-        setArtPieces(mappedArt);
-        setCarouselArt(selectedArt);
-    }, [selectedCategoryId, setArtPieces, setCarouselArt]);
+        setArtGalleryPieces(mappedArt);
+    }, [categorySelectedArtwork, setArtGalleryPieces]);
 
     const onImageClick = (imageId) => {
         setSelectedImageId(imageId);
@@ -66,14 +51,14 @@ function ArtGallery({ selectedCategoryId }) {
     return (
         <Container>
             <CarouselModal
-                selectedArtPieces={carouselArt}
+                selectedArtPieces={categorySelectedArtwork}
                 selectedImageId={selectedImageId}
                 setSelectedImageId={setSelectedImageId}
                 setShowModal={setShowModal}
                 showModal={showModal}>
             </CarouselModal>
             <div className="art-gallery-container">
-                {artPieces}
+                {artGalleryPieces}
             </div>
         </Container>
     )
