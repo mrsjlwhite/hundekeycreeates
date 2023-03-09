@@ -33,14 +33,14 @@ const createImageObjects = (count, categoryId) => {
     }
 }
 
-const createVideoObjects = (categoryId, alt) => {
-    Art.push({
-        id: Art.length + 1,
-        categoryId: categoryId,
-        originalAlt: alt,
-        isVideo: true
-    });
-}
+// const createVideoObjects = (categoryId, alt) => {
+//     Art.push({
+//         id: Art.length + 1,
+//         categoryId: categoryId,
+//         originalAlt: alt,
+//         isVideo: true
+//     });
+// }
 
 Categories.forEach(category => {
     switch (category.filename) {

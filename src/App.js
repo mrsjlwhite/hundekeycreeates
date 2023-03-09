@@ -8,6 +8,7 @@ import Footer from './components/footer/footer';
 import AboutMe from './components/aboutMe/aboutMe';
 import ContactMe from './components/contactMe/contactMe';
 import Header from './components/header/header';
+import ArchGallery from './components/archGallery/ArchGallery';
 
 function App() {
   const [selectedCategoryId, setSelectedCategoryId] = useState(0);
@@ -41,7 +42,8 @@ function App() {
         setShowContactMe={setShowContactMe}>
       </MyNavbar>
       {showGallery &&
-        <GallerySection></GallerySection>
+        // <GallerySection></GallerySection>
+        <ArchGallery></ArchGallery>
       }
       {showAboutMe &&
         <AboutMe></AboutMe>
