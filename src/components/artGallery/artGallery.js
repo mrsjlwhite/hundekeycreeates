@@ -3,7 +3,6 @@ import './_artGallery.scss';
 import Container from "react-bootstrap/esm/Container";
 import Art from "../../data/art";
 import CarouselModal from "../carouselModal/carouselModal";
-import ceramicsVideo from "../../assets/vid/ceramics.mp4";
 
 function ArtGallery({ selectedCategoryId }) {
     const [categorySelectedArtwork, setCategorySelectedArtwork] = useState([]);
@@ -18,16 +17,16 @@ function ArtGallery({ selectedCategoryId }) {
 
     useEffect(() => {
         const mappedArt = categorySelectedArtwork.map((artObj) => {
-            if (artObj.isVideo) {
-                return (
-                    <video
-                        key={artObj.id}
-                        className="img-fluid"
-                        onClick={() => onImageClick(artObj.id)}>
-                        <source src={ceramicsVideo} type="video/mp4"></source>
-                    </video>
-                )
-            }
+            // if (artObj.isVideo) {
+            //     return (
+            //         <video
+            //             key={artObj.id}
+            //             className="img-fluid"
+            //             onClick={() => onImageClick(artObj.id)}>
+            //             <source src={ceramicsVideo} type="video/mp4"></source>
+            //         </video>
+            //     )
+            // }
 
             return (
                 <img
