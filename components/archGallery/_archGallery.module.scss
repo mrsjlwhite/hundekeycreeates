@@ -1,11 +1,12 @@
 @import '../../styles/variables';
 
-$cardWidth: 23vw;
+$cardWidth: 22vw;
 $cardWidthMobile: 70vw;
 
 .archTitle {
     margin-top: 2%;
     text-align: center;
+    font-family: $font-title;
 }
 
 .archContainer {
@@ -19,7 +20,7 @@ $cardWidthMobile: 70vw;
         img {
             border-top-left-radius: 50%;
             border-top-right-radius: 50%;
-            border: solid 3px lightgray;
+            border: solid 3px $gray;
             height: 100%;
             max-width: $cardWidth;
             object-fit: cover;
@@ -27,10 +28,18 @@ $cardWidthMobile: 70vw;
     }
 
     .archContent {
-        background-color: rgba($apricot, 0.5);
+        background-color: rgba($beige-2, 0.5);
         max-width: $cardWidth;
         padding: 1.5em;
         text-align: center;
+
+        .contentTitle {
+            font-family: $font-title;
+        }
+
+        .contentDesc {
+            font-family: $font-body;
+        }
     }
 }
 

@@ -3,14 +3,14 @@
 .navbarContents {
     background-color: transparent;
     justify-content: right;
-    
+
     .mainLink {
         color: $sage;
         font-size: 18px;
         font-weight: 250;
         letter-spacing: .2rem;
         text-transform: uppercase;
-        
+
         a {
             color: $sage;
         }
@@ -21,7 +21,7 @@
     }
 
     .childLink {
-        
+
         &:hover {
             background-color: $sage;
             color: $light-beige;
@@ -45,7 +45,7 @@
         }
 
         figcaption {
-            color: $sage;
+            color: $black;
             font-family: $font-title;
             font-size: 18px;
             font-weight: 800;

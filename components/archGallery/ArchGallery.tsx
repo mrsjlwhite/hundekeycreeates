@@ -25,8 +25,12 @@ const ArchGallery = () => {
                                     <CategoryImage name={category.name} />
                                 </div>
                                 <div className={Styles.archContent}>
-                                    <h4>{category.name}</h4>
-                                    <p>{category.description}</p>
+                                    <h4 className={Styles.contentTitle}>
+                                        {category.name}
+                                    </h4>
+                                    <p className={Styles.contentDesc}>
+                                        {category.description}
+                                    </p>
                                 </div>
                             </div>
                         )
