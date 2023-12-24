@@ -1,25 +1,25 @@
 @import '../../styles/_variables.scss';
 
-.contact-me {
+.contactContainer {
     height: 100vh;
     margin-top: 4rem;
     text-align: center;
     
-    .contact-title {
+    .contactTitle {
         color: $hookers-green;
         font-family: $font-title;
         margin-bottom: 35px;
         text-align: center;
     }
 
-    .contact-desc,
-    .contact-link {
+    .contactDesc,
+    .contactLink {
         color: $font-color;
         font-family: $font-body;
         letter-spacing: 2px;
     }
 
-    .contact-link {
+    .contactLink {
         font-family: $font-title;
         margin: 3rem;
         
@@ -36,12 +36,12 @@
 
 @media only screen and (max-width: 768px) {
     
-    .contact-me {
+    .contactContainer {
         height: 53vh;
         margin-top: 0;
     }
 
-    .contact-link {
+    .contactLink {
         
         p {
             font-size: 30px;

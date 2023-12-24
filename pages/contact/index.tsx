@@ -1,5 +1,8 @@
-import './_contact.module.scss';
+import Styles from './_contact.module.scss';
 import { Content } from "../../data/content";
+import { Container } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 export default function Contact() {
     const cm = Content.contact;
@@ -9,16 +12,18 @@ export default function Contact() {
     }
 
     return (
-        <div className='container contact-me'>
-            <h3 className='contact-title'>Contact Me</h3>
-            <h5 className='contact-desc'>
+        <Container className={Styles.contactContainer}>
+            <h3 className={Styles.contactTitle}>
+                Contact Me
+            </h3>
+            <h5 className={Styles.contactDesc}>
                 {cm.description}
                 {cm.instagrams.map(ig => {
                     return (
                         <div key={ig.handle}
-                            className='contact-link'
+                            className={Styles.contactLink}
                             onClick={() => onIconClick(ig.link)}>
-                            <i className="fa-brands fa-instagram fa-2xl"></i>
+                            <FontAwesomeIcon icon={faInstagram} size={'2xl'} />
                             <p>
                                 &nbsp;
                                 {ig.handle}
@@ -27,6 +32,6 @@ export default function Contact() {
                     )
                 })}
             </h5>
-        </div>
+        </Container>
     )
 };
