@@ -1,46 +1,42 @@
 @import '../../styles/variables';
 
-.about-container {
-  height: 100%;
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  margin-bottom: 10%;
 }
 
-.about-me {
+.aboutPic {
+  border-radius: 50%;
+  height: 80vh;
+  margin: auto;
+  width: 36vw;
+  padding: 1rem;
+}
+
+.aboutTitle {
+  color: $hookers-green;
+  font-family: $font-title;
+  margin: auto;
   text-align: center;
+  width: 50vw;
+  padding: 2rem;
+  font-size: 4rem;
+}
 
-
-  .about-title {
-    color: $hookers-green;
-    font-family: $font-title;
-    margin: 2rem 0 3rem 0;
-  }
-
-  .about-desc {
-    display: flex;
-    font-family: $font-body;
-    justify-content: center;
-    letter-spacing: 2px;
-    line-height: 40px;
-    margin-top: 250px;
-  }
-
-  img {
-
-    @include image-hover;
-  }
+.aboutDesc {
+  font-family: $font-title;
+  letter-spacing: 2px;
+  line-height: 40px;
+  width: 50vw;
+  text-align: justify;
+  margin: auto;
+  font-size: 1.3rem;
 }
 
 @media only screen and (max-width: 768px) {
-
-  .about-me {
-    margin-top: 0;
-
-
-    .about-desc {
-      margin: 0 1rem 3rem 1rem;
-    }
-
-    img {
-      max-height: 95%;
-    }
+  .aboutPic {
+    width: 80vw;
   }
 }
