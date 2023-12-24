@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './_footer.module.scss';
+import Styles from './_footer.module.scss';
 
 function Footer() {
     const [currentYear, setYear] = useState<number>();
@@ -10,7 +10,7 @@ function Footer() {
     }, [])
 
     return (
-        <footer className='footer'>
+        <footer className={Styles.footer}>
             Copyright &#169; {currentYear} Candace Jackson
             &#38;
             <a target="_blank" href='https://jlwhite.dev' rel="noreferrer"> Jeslyn White</a>

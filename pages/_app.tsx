@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Head from 'next/head';
 import { Playfair_Display } from 'next/font/google';
 import MyNavbar from '../components/navbar/navbar';
+import Footer from '../components/footer/footer';
 // import { config } from '@fortawesome/fontawesome-svg-core'
 // import '@fortawesome/fontawesome-svg-core/styles.css'
 
@@ -46,7 +47,7 @@ const App = ({ Component, pageProps }: AppProps) => {
             <div className={`${playfair.variable}`}>
                 <MyNavbar />
                 <Component {...pageProps} />
-                {/* <FooterNavbar></FooterNavbar> */}
+                <Footer />
             </div>
         </>
     )
