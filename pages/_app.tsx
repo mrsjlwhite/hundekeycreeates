@@ -1,15 +1,10 @@
 import { useEffect } from 'react';
 import { AppProps } from 'next/app';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import '../styles/global.scss';
-// import '@fortawesome/fontawesome-free/js/fontawesome';
-// import '@fortawesome/fontawesome-free/js/brands';
 import Head from 'next/head';
 import { Playfair_Display } from 'next/font/google';
 import MyNavbar from '../components/navbar/navbar';
 import Footer from '../components/footer/footer';
-// import { config } from '@fortawesome/fontawesome-svg-core'
-// import '@fortawesome/fontawesome-svg-core/styles.css'
 
 // Fixes fontawesome xl icons in nextjs
 // config.autoAddCss = false;

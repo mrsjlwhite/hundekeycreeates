@@ -1,4 +1,4 @@
-import Categories from "./categories";
+import { Categories } from "./categories";
 
 const illustrations = 'illustrations';
 const illustrationsId = 3;

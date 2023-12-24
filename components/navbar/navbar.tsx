@@ -2,7 +2,7 @@ import Styles from './_navbar.module.scss';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Categories from '../../data/categories';
+import { Categories } from '../../data/categories';
 import Link from 'next/link';
 import logo from '../../public/imgs/logo.png';
 import watercolorVine from '../../public/imgs/watercolor-plant.png';
