@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from 'next/image';
 import illustration from '../../public/imgs/categories/illustrations(0).jpg';
-import graphicdesign from '../../public/imgs/categories/graphicdesign(9).jpg';
-import threeddesign from '../../public/imgs/categories/3ddesign(0).jpg';
+import graphicdesign from '../../public/imgs/categories/graphic-design(9).jpg';
+import threeddesign from '../../public/imgs/categories/3d-design(0).jpg';
 import { useEffect, useState } from 'react';
 import { Projects } from '../../constants/projects';
 

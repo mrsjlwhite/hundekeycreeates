@@ -14,10 +14,10 @@ function MyNavbar() {
     <>
       <header className={Styles.headerImages}>
         <figure className={Styles.logoFigure}>
-          <Image className={Styles.logo} src={logo} alt='logo' width={160} />
+          <Image className={Styles.logo} src={logo} alt='logo' height={185} width={160} priority />
           <figcaption>Candace C. Jackson</figcaption>
         </figure>
-        <Image className={Styles.topPlant} src={watercolorVine} alt="vine" width={500} />
+        <Image className={Styles.topPlant} src={watercolorVine} alt="vine" width={500} height={250} priority />
       </header>
       <Navbar expand="lg">
         <div className='container'>
@@ -34,10 +34,11 @@ function MyNavbar() {
               <NavDropdown className={Styles.mainLink} title="Explore" id="basic-nav-dropdown">
                 {Categories.map(category => {
                   return (
-                    <NavDropdown.Item key={category.id}
+                    <NavDropdown.Item
+                      key={category.name}
+                      as={Link}
                       className={Styles.childLink}
-                    // onClick={() => onGalleryClick(category.id)}
-                    >
+                      href={`/gallery/${category.link}`}>
                       {category.name}
                     </NavDropdown.Item>
                   )

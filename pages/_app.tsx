@@ -6,6 +6,7 @@ import { Playfair_Display } from 'next/font/google';
 import MyNavbar from '../components/navbar/navbar';
 import Footer from '../components/footer/footer';
 import Styles from '../styles/app.module.scss';
+import SSRProvider from 'react-bootstrap/SSRProvider';
 // The following import prevents a Font Awesome icon server-side rendering bug,
 // where the icons flash from a very large icon down to a properly sized one:
 import '@fortawesome/fontawesome-svg-core/styles.css';
@@ -30,7 +31,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     }, []);
 
     return (
-        <>
+        <SSRProvider>
             <Head>
                 <title>{title}</title>
                 <meta name="description" content={description} />
@@ -48,7 +49,7 @@ const App = ({ Component, pageProps }: AppProps) => {
                 <Component {...pageProps} />
                 <Footer />
             </div>
-        </>
+        </SSRProvider>
     )
 }
 

@@ -3,18 +3,21 @@ import { Projects } from "../constants/projects";
 
 export const Categories: ICategory[] = [
     {
-        id: 3,
         name: Projects.illustrations,
-        description: 'I need to make things with my hands every day.'
+        link: 'illustrations',
+        description: 'I need to make things with my hands every day.',
+        projectsCount: 10
     },
     {
-        id: 4,
         name: Projects.graphicDesign,
-        description: 'Design is the intermediary between information and understanding.'
+        link: 'graphic-design',
+        description: 'Design is the intermediary between information and understanding.',
+        projectsCount: 10
     },
     {
-        id: 8,
         name: Projects.threeDesign,
-        description: 'Art is not what you see, but what you make others see.'
+        link: '3d-design',
+        description: 'Art is not what you see, but what you make others see.',
+        projectsCount: 2
     }
 ];

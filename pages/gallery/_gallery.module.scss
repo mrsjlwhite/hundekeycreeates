@@ -1,6 +1,6 @@
 @import '../../styles/_variables.scss';
 
-.art-gallery-container {
+.galleryContainer {
     cursor: pointer;
     display: grid;
     grid-gap: 1rem;
@@ -18,7 +18,7 @@
 
 @media only screen and (max-width: 768px) {
 
-    .art-gallery-container {
+    .galleryContainer {
         display: grid;
         grid-row-gap: 30px;
         grid-template-columns: 1fr;
