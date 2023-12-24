@@ -10,18 +10,14 @@ $apricot: #EAB699;
 $sage-faded: rgb(178, 172, 136, 0.6);
 $box-shadow: rgba(0, 0, 0, 0.1);
 $font-color: $smokey-black;
-// $font-title: PlayfairDisplay;
-$font-body: BrandonGrotesque;
 
 //fonts
-// @font-face {
-//     font-family: PlayfairDisplay;
-//     src: url(../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf);
-// }
+$font-title: var(--font-title); //'Playfair_Display';
+$font-body: BrandonGrotesque;
 
 @font-face {
     font-family: BrandonGrotesque;
-    src: url(../src/assets/fonts/brandon-grotesque-black.otf);
+    src: url(../public/fonts/brandon-grotesque-black.otf);
 }
 
 //shared styles
