@@ -29,7 +29,7 @@ const CategoryImage = ({ name }: Props) => {
         <Image
             src={imgSrc}
             alt={`${name} art example`}
-            height={700}
+            height={900}
             width={400}>
         </Image>
     )

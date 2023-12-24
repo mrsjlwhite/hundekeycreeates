@@ -5,6 +5,7 @@ import Head from 'next/head';
 import { Playfair_Display } from 'next/font/google';
 import MyNavbar from '../components/navbar/navbar';
 import Footer from '../components/footer/footer';
+import Styles from '../styles/app.module.scss';
 
 // Fixes fontawesome xl icons in nextjs
 // config.autoAddCss = false;
@@ -39,7 +40,7 @@ const App = ({ Component, pageProps }: AppProps) => {
                 <meta property="twitter:title" content={title} />
                 <meta property="twitter:description" content={description} />
             </Head>
-            <div className={`${playfair.variable}`}>
+            <div className={`${Styles.app} ${playfair.variable}`}>
                 <MyNavbar />
                 <Component {...pageProps} />
                 <Footer />

@@ -1,10 +1,10 @@
-import '../styles/index.module.scss';
 import ArtGallery from '../components/artGallery/artGallery';
 import { useState } from 'react';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import vine from '../public/imgs/vine.png';
 import ArchGallery from '../components/archGallery/ArchGallery';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Index() {
     const [selectedCategoryId, setSelectedCategoryId] = useState(0);
@@ -21,8 +21,15 @@ export default function Index() {
     };
 
     return (
-        <div className="app">
+        <>
             <ArchGallery />
-        </div>
+            <div className='text-center'>
+                <Link
+                    className='btn btn-secondary'
+                    href={'about'}>
+                    Learn More
+                </Link>
+            </div>
+        </>
     );
 }

@@ -1,11 +1,11 @@
-import './_aboutMe.module.scss';
-import Content from "../../data/content";
+import './_about.module.scss';
+import { Content } from "../../data/content";
 import aboutPic from '../../public/imgs/about.jpeg';
 import { Container, Col, Row } from 'react-bootstrap';
 import Image from 'next/image';
 
-function AboutMe() {
-  const am = Content[0];
+function About() {
+  const am = Content.about;
 
   return (
     <Container className='about-container'>
@@ -24,4 +24,4 @@ function AboutMe() {
   )
 };
 
-export default AboutMe;
+export default About;

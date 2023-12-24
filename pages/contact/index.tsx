@@ -1,8 +1,8 @@
-import './_contactMe.module.scss';
-import Content from "../../data/content";
+import './_contact.module.scss';
+import { Content } from "../../data/content";
 
-function ContactMe() {
-    const cm = Content[1];
+export default function Contact() {
+    const cm = Content.contact;
 
     const onIconClick = (link) => {
         window.open(link);
@@ -15,11 +15,11 @@ function ContactMe() {
                 {cm.description}
                 {cm.instagrams.map(ig => {
                     return (
-                        <div  key={ig.handle}
+                        <div key={ig.handle}
                             className='contact-link'
                             onClick={() => onIconClick(ig.link)}>
                             <i className="fa-brands fa-instagram fa-2xl"></i>
-                            <p>    
+                            <p>
                                 &nbsp;
                                 {ig.handle}
                             </p>
@@ -30,5 +30,3 @@ function ContactMe() {
         </div>
     )
 };
-
-export default ContactMe;
