@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import '@fortawesome/fontawesome-free/js/brands';
 import Head from 'next/head';
 import { Playfair_Display } from 'next/font/google';
+import MyNavbar from '../components/navbar/navbar';
 // import { config } from '@fortawesome/fontawesome-svg-core'
 // import '@fortawesome/fontawesome-svg-core/styles.css'
 
@@ -43,7 +44,7 @@ const App = ({ Component, pageProps }: AppProps) => {
                 <meta property="twitter:description" content={description} />
             </Head>
             <div className={`${playfair.variable}`}>
-                {/* <HeaderNavbar></HeaderNavbar> */}
+                <MyNavbar />
                 <Component {...pageProps} />
                 {/* <FooterNavbar></FooterNavbar> */}
             </div>

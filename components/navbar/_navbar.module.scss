@@ -1,10 +1,10 @@
 @import '../../styles/_variables.scss';
 
-.navbar-contents {
+.navbarContents {
     background-color: transparent;
     justify-content: right;
     
-    .main-link {
+    .mainLink {
         color: $sage;
         font-size: 18px;
         font-weight: 250;
@@ -20,12 +20,63 @@
         }
     }
 
-    .child-link {
+    .childLink {
         
         &:hover {
             background-color: $sage;
             color: $light-beige;
             font-weight: 500;
         }
+    }
+}
+
+.headerImages {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    .logoFigure {
+        cursor: pointer;
+        margin-left: 4rem;
+        margin-top: 2rem;
+
+        .logo {
+            max-height: 185px;
+        }
+
+        figcaption {
+            color: $sage;
+            font-family: $font-title;
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: .1rem;
+        }
+    }
+
+    .topPlant {
+        margin-top: 0.5rem;
+        max-height: 250px;
+        //TODO: add animated fadeIn
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .logo {
+        max-height: 300px !important;
+    }
+
+    .logoFigure {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+
+        figcaption {
+            margin-left: 2rem;
+        }
+    }
+
+    .topPlant {
+        display: none;
     }
 }

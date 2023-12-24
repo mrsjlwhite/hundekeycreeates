@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import './_artGallery.module.scss';
-import Container from "react-bootstrap/esm/Container";
 import Art from "../../data/art";
 import CarouselModal from "../carouselModal/carouselModal";
 
@@ -48,7 +47,7 @@ function ArtGallery({ selectedCategoryId }) {
     };
 
     return (
-        <Container>
+        <div className="container">
             <CarouselModal
                 selectedArtPieces={categorySelectedArtwork}
                 selectedImageId={selectedImageId}
@@ -59,7 +58,7 @@ function ArtGallery({ selectedCategoryId }) {
             <div className="art-gallery-container">
                 {artGalleryPieces}
             </div>
-        </Container>
+        </div>
     )
 }
 
