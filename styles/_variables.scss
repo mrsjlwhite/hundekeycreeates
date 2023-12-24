@@ -1,0 +1,41 @@
+//colors
+$light-beige: #FAFDF3;
+$sage: #B2AC88;
+$cambridge-blue: #9EB4A7;
+$hookers-green: #426A5A;
+$tan: #D2B48C;
+$smokey-black: #0D0A0B;
+$floral-white: #FFFAF0;
+$apricot: #EAB699;
+$sage-faded: rgb(178, 172, 136, 0.6);
+$box-shadow: rgba(0, 0, 0, 0.1);
+$font-color: $smokey-black;
+// $font-title: PlayfairDisplay;
+$font-body: BrandonGrotesque;
+
+//fonts
+// @font-face {
+//     font-family: PlayfairDisplay;
+//     src: url(../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf);
+// }
+
+@font-face {
+    font-family: BrandonGrotesque;
+    src: url(../src/assets/fonts/brandon-grotesque-black.otf);
+}
+
+//shared styles
+@mixin image-hover {
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 5px;
+    box-shadow: 0 1px 2px $box-shadow;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    &:hover {
+        -webkit-transform: scale(1.03, 1.03);
+        -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        box-shadow: 7px 7px 8px $box-shadow;
+        transform: scale(1.03, 1.03);
+        transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+}

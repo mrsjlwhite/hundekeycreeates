@@ -1,9 +1,10 @@
 import React from 'react';
+import Styles from '../styles/index.module.scss';
 
-export default function App() {
+export default function Index() {
 
     return (
-        <main>
+        <main className={Styles.app}>
             <p>oh hi mark</p>
         </main>
     )
