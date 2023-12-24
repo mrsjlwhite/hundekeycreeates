@@ -3,6 +3,7 @@ import illustration from '../../public/imgs/categories/illustrations(0).jpg';
 import graphicdesign from '../../public/imgs/categories/graphicdesign(9).jpg';
 import threeddesign from '../../public/imgs/categories/3ddesign(0).jpg';
 import { useEffect, useState } from 'react';
+import { Projects } from '../../constants/projects';
 
 type Props = {
     name: string
@@ -13,13 +14,13 @@ const CategoryImage = ({ name }: Props) => {
 
     useEffect(() => {
         switch (name) {
-            case 'Illustrations':
+            case Projects.illustrations:
                 setImgSrc(illustration);
                 break;
-            case 'Graphic Design':
+            case Projects.graphicDesign:
                 setImgSrc(graphicdesign);
                 break;
-            case '3D Design':
+            case Projects.threeDesign:
                 setImgSrc(threeddesign);
                 break;
         }
