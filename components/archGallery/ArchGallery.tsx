@@ -2,8 +2,11 @@ import { useEffect, useState } from 'react';
 import Styles from './_archGallery.module.scss';
 import { Categories } from '../../data/categories';
 import CategoryImage from '../categoryImage/CategoryImage';
+import { useRouter } from 'next/navigation';
 
 const ArchGallery = () => {
+    const router = useRouter();
+
     const [archCategories, setArchCategories] = useState([]);
 
     useEffect(() => {
@@ -20,7 +23,7 @@ const ArchGallery = () => {
                 <div className={Styles.archContainer}>
                     {archCategories.map((category, index) => {
                         return (
-                            <div key={index} className={Styles.arch}>
+                            <div key={index} className={Styles.arch} onClick={() => router.push(`/gallery/${category.link}`)}>
                                 <div className={Styles.archImg}>
                                     <CategoryImage name={category.name} />
                                 </div>

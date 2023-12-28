@@ -3,6 +3,13 @@
 $cardWidth: 22vw;
 $cardWidthMobile: 70vw;
 
+.arch {
+    @include image-hover;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    cursor: pointer;
+}
+
 .archTitle {
     margin-top: 2%;
     text-align: center;
