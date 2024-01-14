@@ -1,12 +1,10 @@
 import Styles from './_about.module.scss';
-import { Content } from "../../data/content";
 import aboutPic from '../../public/imgs/about.jpeg';
 import { Container, Row } from 'react-bootstrap';
 import Image from 'next/image';
+import AboutDescription from '../../data/aboutPage';
 
 function About() {
-  const am = Content.about;
-
   return (
     <Container>
       <Row>
@@ -21,7 +19,7 @@ function About() {
           </h1>
 
           <h4 className={Styles.aboutDesc}>
-            {am.description}
+            {AboutDescription}
           </h4>
         </div>
       </Row>

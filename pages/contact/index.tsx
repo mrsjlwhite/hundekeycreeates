@@ -1,12 +1,10 @@
 import Styles from './_contact.module.scss';
-import { Content } from "../../data/content";
+import { ContactPage } from "../../data/contactPage";
 import { Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 export default function Contact() {
-    const cm = Content.contact;
-
     const onIconClick = (link) => {
         window.open(link);
     }
@@ -17,8 +15,8 @@ export default function Contact() {
                 Contact Me
             </h3>
             <h5 className={Styles.contactDesc}>
-                {cm.description}
-                {cm.instagrams.map(ig => {
+                {ContactPage.description}
+                {ContactPage.instagrams.map(ig => {
                     return (
                         <div key={ig.handle}
                             className={Styles.contactLink}
