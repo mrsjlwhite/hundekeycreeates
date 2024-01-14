@@ -10,18 +10,11 @@ $cardWidthMobile: 70vw;
     cursor: pointer;
 }
 
-.archTitle {
-    margin-top: 2%;
-    text-align: center;
-    font-family: $font-title;
-}
-
-.archContainer {
+.arches {
     align-items: flex-end;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding: 5rem;
 
     .archImg {
         img {
@@ -53,7 +46,7 @@ $cardWidthMobile: 70vw;
 
 @media screen and (max-width: 650px) {
 
-    .archContainer {
+    .arches {
         align-items: center;
         flex-direction: column;
         padding: 2rem;
