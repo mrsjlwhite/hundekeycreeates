@@ -6,7 +6,6 @@ import { useRouter } from 'next/navigation';
 
 const ArchGallery = () => {
     const router = useRouter();
-
     const [archCategories, setArchCategories] = useState([]);
 
     useEffect(() => {

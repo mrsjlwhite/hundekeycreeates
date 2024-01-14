@@ -35,13 +35,14 @@ $cardWidthMobile: 70vw;
     }
 
     .archContent {
-        background-color: rgba($beige-2, 0.5);
+        background-color: $beige-2;
         max-width: $cardWidth;
         padding: 1.5em;
         text-align: center;
 
         .contentTitle {
             font-family: $font-title;
+            font-weight: 500;
         }
 
         .contentDesc {

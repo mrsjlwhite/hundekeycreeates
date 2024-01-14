@@ -1,7 +1,7 @@
 //theme
 $beige-1-faded: rgba(230, 217, 208, 0.5);
-$beige-1: rgb(230, 217, 208);
-$beige-2: rgb(221, 197, 178);
+$beige-1: rgb(230, 217, 208); // background
+$beige-2: rgb(221, 197, 178); // accent
 $beige-3: rgb(157, 131, 106);
 $gray: rgb(188, 181, 177);
 $black: rgb(42, 35, 33);
@@ -20,13 +20,8 @@ $sage-faded: rgb(178, 172, 136, 0.6);
 $box-shadow: rgba(0, 0, 0, 0.1);
 
 //fonts
-$font-title: var(--font-title); //'Playfair_Display';
-$font-body: BrandonGrotesque;
-
-@font-face {
-    font-family: BrandonGrotesque;
-    src: url(../public/fonts/brandon-grotesque-black.otf);
-}
+$font-title: var(--font-title);
+$font-body: var(--font-body);
 
 //shared styles
 @mixin image-hover {

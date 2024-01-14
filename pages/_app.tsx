@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { AppProps } from 'next/app';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Head from 'next/head';
-import { Playfair_Display } from 'next/font/google';
+import { Playfair_Display, Open_Sans } from 'next/font/google';
 import MyNavbar from '../components/navbar/navbar';
 import Footer from '../components/footer/footer';
 import Styles from '../styles/app.module.scss';
@@ -14,10 +14,16 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false; /* eslint-disable import/first */
 
-const playfair = Playfair_Display({
-    weight: ['400'],
+const titleFont = Playfair_Display({
+    weight: ['400', '500'],
     subsets: ['latin'],
     variable: '--font-title'
+});
+
+const bodyFont = Open_Sans({
+   weight: ['400'],
+   subsets: ['latin'],
+   variable: '--font-body'
 });
 
 const title = "HundeykeyCreeates";
@@ -44,7 +50,7 @@ const App = ({ Component, pageProps }: AppProps) => {
                 <meta property="twitter:title" content={title} />
                 <meta property="twitter:description" content={description} />
             </Head>
-            <div className={`${Styles.app} ${playfair.variable}`}>
+            <div className={`${Styles.app} ${titleFont.variable} ${bodyFont.variable}`}>
                 <MyNavbar />
                 <Component {...pageProps} />
                 <Footer />
