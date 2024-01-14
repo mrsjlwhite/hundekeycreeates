@@ -1,5 +1,9 @@
 @import '../styles/variables';
 
+.sectionContainer {
+    padding: 3rem 0;
+}
+
 .title {
     margin-top: 2%;
     text-align: center;
@@ -8,4 +12,14 @@
 
 .container {
     padding: 5rem;
+
+    h3,
+    h4,
+    h5 {
+        font-family: $font-title;
+    }
+
+    p {
+        font-family: $font-body;
+    }
 }

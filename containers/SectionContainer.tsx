@@ -10,11 +10,13 @@ const SectionContainer = ({ title, children }: Props) => {
     return (
         <div className='row'>
             <div className='container'>
-                <h2 className={Styles.title}>
-                    {title}
-                </h2>
-                <div className={Styles.container}>
-                    {children}
+                <div className={Styles.sectionContainer}>
+                    <h2 className={Styles.title}>
+                        {title}
+                    </h2>
+                    <div className={Styles.container}>
+                        {children}
+                    </div>
                 </div>
             </div>
         </div>
