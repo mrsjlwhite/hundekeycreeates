@@ -11,8 +11,9 @@ export default function Index() {
             <ArchGallery />
             <div className='text-center'>
                 <Link
-                    className='btn btn-secondary'
-                    href={'about'}>
+                    className='btn btn-outline-secondary'
+                    href='/about'
+                    scroll={false}>
                     Learn More
                 </Link>
             </div>
