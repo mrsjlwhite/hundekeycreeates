@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import Styles from './sectionContainer.module.scss';
+import { Container, Row } from 'react-bootstrap';
 
 type Props = {
     title: string
@@ -8,8 +9,8 @@ type Props = {
 
 const SectionContainer = ({ title, children }: Props) => {
     return (
-        <div className='row'>
-            <div className='container'>
+        <Row>
+            <Container>
                 <div className={Styles.sectionContainer}>
                     <h2 className={Styles.title}>
                         {title}
@@ -18,8 +19,8 @@ const SectionContainer = ({ title, children }: Props) => {
                         {children}
                     </div>
                 </div>
-            </div>
-        </div>
+            </Container>
+        </Row>
     )
 }
 
