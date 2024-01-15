@@ -19,6 +19,7 @@
   },
   "include": [
     "next-env.d.ts",
+    "/data/*.ts",
     "**/*.ts",
     "**/*.tsx"
   ],
