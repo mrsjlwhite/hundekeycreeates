@@ -1,0 +1,69 @@
+@import '../../styles/variables';
+
+$cardWidth: 22vw;
+$cardWidthMobile: 70vw;
+
+.arch {
+    @include image-hover;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    cursor: pointer;
+}
+
+.arches {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    .archImg {
+        img {
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border: solid 3px $gray;
+            height: 100%;
+            max-width: $cardWidth;
+            object-fit: cover;
+        }
+    }
+
+    .archContent {
+        background-color: $beige-2;
+        max-width: $cardWidth;
+        padding: 1.5em;
+        text-align: center;
+
+        .contentTitle {
+            font-family: $font-title;
+            font-weight: 500;
+        }
+
+        .contentDesc {
+            font-family: $font-body;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .arches {
+        align-items: center;
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .arch {
+        margin: 5% 0;
+    }
+
+    .archImg {
+
+        img {
+            max-width: $cardWidthMobile;
+        }
+    }
+
+    .archContent {
+        max-width: $cardWidthMobile;
+    }
+}

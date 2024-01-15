@@ -1,0 +1,34 @@
+@import '../../styles/_variables.scss';
+
+.galleryContainer {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: auto auto auto;
+    margin: 3rem;
+    padding: auto;
+
+    img {
+        @include image-hover;
+        cursor: pointer;
+        align-self: center;
+        display: flex;
+        max-height: 975px;
+        object-fit: contain;
+        background-image: linear-gradient(to bottom right, $beige-2, $beige-3);
+        border-top-right-radius: 50%;
+        border-top-left-radius: 50%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .galleryContainer {
+        display: flex;
+        flex-direction: column;
+
+        img {
+            max-height: 48vh;
+            max-width: 80vw;
+        }
+    }
+}

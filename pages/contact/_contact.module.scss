@@ -1,0 +1,58 @@
+@import '../../styles/_variables.scss';
+
+.contactContainer {
+    height: 100vh;
+    margin-top: 4rem;
+    text-align: center;
+    
+    .contactTitle {
+        color: $hookers-green;
+        font-family: $font-title;
+        margin-bottom: 35px;
+        text-align: center;
+    }
+
+    .contactDesc,
+    .contactLink {
+        color: $font-color;
+        font-family: $font-body;
+        letter-spacing: 2px;
+    }
+
+    .contactLink {
+        font-family: $font-title;
+        margin: 3rem;
+        
+        p {
+            margin-top: .8rem;
+        }
+
+        &:hover {
+            color: $hookers-green;
+            cursor: pointer;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .contactContainer {
+        height: 53vh;
+        margin-top: 0;
+    }
+
+    .contactLink {
+        
+        p {
+            font-size: 30px;
+            margin-top: 3rem !important;
+        }
+
+        .fa-instagram {
+            display: flex;
+            flex-direction: column;
+            font-size: 80px;
+            margin-top: 80px;
+        }
+    }
+}

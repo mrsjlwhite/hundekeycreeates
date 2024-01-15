@@ -1,0 +1,43 @@
+@import '../../styles/variables';
+
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+
+.aboutPic {
+  border-radius: 50%;
+  height: 80vh;
+  margin: auto;
+  width: 36vw;
+  padding: 1rem;
+  object-fit: cover;
+}
+
+.aboutTitle {
+  color: $hookers-green;
+  font-family: $font-title;
+  margin: auto;
+  text-align: center;
+  width: 50vw;
+  padding: 2rem;
+  font-size: 4rem;
+}
+
+.aboutDesc {
+  font-family: $font-title;
+  letter-spacing: 2px;
+  line-height: 40px;
+  width: 50vw;
+  text-align: justify;
+  margin: auto;
+  font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .aboutPic {
+    width: 80vw;
+  }
+}
