@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./_carouselModal.module.scss";
+import Styles from "./_carouselModal.module.scss";
 import { Carousel, Modal } from "react-bootstrap";
 
 function CarouselModal({ selectedArtPieces, selectedImageId, setSelectedImageId, setShowModal, showModal }) {
@@ -33,9 +33,9 @@ function CarouselModal({ selectedArtPieces, selectedImageId, setSelectedImageId,
             return (
                 <Carousel.Item key={artObj.id}>
                     <img
-                        className="carousel-image"
-                        src={`img/${artObj.filename}`} //deployedPath 
-                        // src={require(`/public/img/${artObj.filename}`)} //localPath
+                        className={Styles.carouselImage}
+                        // src={`img/${artObj.filename}`} //deployedPath 
+                        src={artObj.path} //localPath
                         alt={artObj.originalAlt}
                     />
                 </Carousel.Item>
@@ -101,15 +101,15 @@ function CarouselModal({ selectedArtPieces, selectedImageId, setSelectedImageId,
     return (
         <Modal
             show={showModal}
-            className="carousel-modal"
+            className={Styles.carouselModal}
             onHide={() => setShowModal(false)}
             size="lg">
-            <Modal.Header className="modal-title" closeButton>
+            <Modal.Header className={Styles.modalTitle} closeButton>
                 {modalTitle}
             </Modal.Header>
             <Modal.Body>
                 <Carousel
-                    className="carousel-in-modal"
+                    className={Styles.carousel}
                     variant="dark"
                     indicators={false}
                     interval={null}

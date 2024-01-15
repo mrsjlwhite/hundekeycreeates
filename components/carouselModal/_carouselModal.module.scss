@@ -1,17 +1,17 @@
 @import "../../styles/variables";
 
-.carousel-modal {
+.carouselModal {
     height: 100vh;
     top: -2%;
 
-    .modal-title {
+    .modalTitle {
         font-family: $font-title;
         font-weight: 600;
         letter-spacing: .2rem;
     }
 }
 
-.carousel-in-modal {
+.carousel {
     align-items: center;
     display: flex;
     justify-items: center;
@@ -21,11 +21,14 @@
         cursor: pointer;
     }
 
-    .carousel-image {
-        height: 85vh;
+    .carouselImage {
+        width: 50vw;
+        height: 90vh;
         object-fit: contain;
         overflow: hidden;
-        width: 100%;
+        // width: 100%;
+        margin: auto;
+        display: flex;
     }
 
     .carousel-video {
@@ -36,12 +39,12 @@
 
 @media only screen and (max-width: 780px) {
 
-    .carousel-modal {
+    .carouselModal {
         height: 97vh;
         top: 1%;
     }
 
-    .carousel-image {
+    .carouselImage {
         object-fit: scale-down !important;
     }
 
