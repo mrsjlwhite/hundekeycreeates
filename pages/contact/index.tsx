@@ -24,7 +24,6 @@ export default function Contact() {
                                 onClick={() => onIconClick(ig.link)}>
                                 <FontAwesomeIcon icon={faInstagram} size={'2xl'} />
                                 <p>
-                                    &nbsp;
                                     {ig.handle}
                                 </p>
                             </div>
