@@ -57,6 +57,7 @@ $cardWidthMobile: 70vw;
         .archImg {
 
             img {
+                max-height: 50vh;
                 max-width: $cardWidthMobile;
             }
         }
