@@ -23,3 +23,9 @@
         font-family: $font-body;
     }
 }
+
+@media screen and (max-width: 650px) {
+    .sectionContainer {
+        padding: 1rem 0;
+    }
+}

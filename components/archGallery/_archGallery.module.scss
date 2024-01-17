@@ -29,7 +29,7 @@ $cardWidthMobile: 70vw;
 
     .archContent {
         background-color: $beige-2;
-        max-width: $cardWidth;
+        width: $cardWidth;
         padding: 1.5em;
         text-align: center;
 
@@ -46,24 +46,23 @@ $cardWidthMobile: 70vw;
 
 @media screen and (max-width: 650px) {
 
-    .arches {
-        align-items: center;
-        flex-direction: column;
-        padding: 2rem;
-    }
-
     .arch {
         margin: 5% 0;
     }
 
-    .archImg {
+    .arches {
+        align-items: center;
+        flex-direction: column;
 
-        img {
-            max-width: $cardWidthMobile;
+        .archImg {
+
+            img {
+                max-width: $cardWidthMobile;
+            }
         }
-    }
 
-    .archContent {
-        max-width: $cardWidthMobile;
+        .archContent {
+            width: $cardWidthMobile;
+        }
     }
 }
