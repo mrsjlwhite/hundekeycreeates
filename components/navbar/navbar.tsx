@@ -7,13 +7,15 @@ import Link from 'next/link';
 import logo from '../../public/imgs/logo.png';
 import watercolorVine from '../../public/imgs/watercolor-plant.png';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 function MyNavbar() {
+  const router = useRouter();
 
   return (
     <>
       <header className={Styles.headerImages}>
-        <figure className={Styles.logoFigure}>
+        <figure className={Styles.logoFigure} onClick={() => router.push('/', { scroll: false })}>
           <Image className={Styles.logo} src={logo} alt='logo' height={185} width={160} priority />
           <figcaption>Candace C. Jackson</figcaption>
         </figure>
